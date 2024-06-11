@@ -6,14 +6,24 @@
     <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
     <title>Title</title>
 </head>
-<body class="bg-sky-500">
-<h1>This is index template</h1>
-<h2>
-    {% for item in items %}
-    <a href="{% url 'myapp:detail' item.id %}">
-        ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} | {{item.description}} <br>
-    </a>
-    {% endfor %}
-</h2>
+<body>
+    <nav>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <img src="{% static 'myapp/images/shop.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h2>
+        {% for item in items %}
+        <a href="{% url 'myapp:detail' item.id %}">
+            ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} | {{item.description}} <br>
+        </a>
+        {% endfor %}
+    </h2>
 </body>
 </html>

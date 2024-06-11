@@ -557,3 +557,7 @@ video {
 .static {
   position: static;
 }
+
+.h-8 {
+  height: 2rem;
+}
